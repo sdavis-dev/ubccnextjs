@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+    --white-color: #ffffff;
+    --cream-color: #f0e4ce;
+    --teal-color: #047a7e;
+    --light-teal-color: #408f94;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+/* this is for the nav bar */
+header {
+    background: var(--light-teal-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: 15px;
+    background: var(--teal-color);
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--white-color);
+    background: var(--cream-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+        display: none;
+    }
+
+/* hero section */
+.hero-section {
+    min-height: 100vh;
+    background: var(--white-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    color: var(--teal-color);
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+    font-size: 2.3rem;
+}
+
+.hero-section .hero-details .description {
+    font-size: 1.12rem;
+    margin: 24px 0 40px;
+    max-width: 70%;
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--white-color);
+    border-radius: 30px;
+    background: var(--teal-color);
+    font-weight: 500;
+}
+
+.hero-section .hero-details .button:hover {
+    color: var(--teal-color);
+    background: transparent;
+    border-color: var(--teal-color);
+}
+
+.hero-section .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+/* Responsive for max width 900px */
+@media screen and (max-width: 900px) {
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100px;
+    }
+
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+    }
+
+    
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--teal-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: black;
+        display: block;
+        margin-top: 17px;
+        font-size: 1.3rem;
+    }
+
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-section .hero-details :is(.description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+}
