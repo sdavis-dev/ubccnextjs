@@ -84,10 +84,26 @@ header .navbar {
         display: none;
     }
 
+main {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically if main has a height */
+    min-height: 100vh;       /* Makes it take up the full screen height */
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: light background color */
+}
+
 /* hero section */
 .hero-section {
     min-height: 100vh;
     background: var(--white-color);
+}
+
+.hero-details {
+    display: flex;
+    flex-direction: column;  /* Stacks Title, Image, and Text on top of each other */
+    align-items: center;     /* Centers them horizontally */
+    text-align: center;      /* Centers the text inside the title and paragraphs */
 }
 
 .hero-section .section-content {
@@ -128,7 +144,10 @@ header .navbar {
 }
 
 .hero-section .hero-image-wrapper {
-    max-width: 500px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
     margin-right: 30px;
 }
 

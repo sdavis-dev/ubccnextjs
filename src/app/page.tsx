@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Home() {
   return (
@@ -9,7 +10,12 @@ export default function Home() {
         {/* Note: changed 'class' to 'className' for React */}
         <nav className="navbar section-content">
           <Link href="/" className="nav-logo">
-            <img src="ublogo nobg.png" alt="Upward Bound Consulting & Coaching" className="logo-image"/>
+            <Image
+              src="/images/ublogo nobg.png"
+              alt="Upward Bound Consulting & Coaching"
+              width = {75}
+              height = {75}
+            />
           </Link>
           <ul className="nav-menu">
             <button id="menu-close-button" className="fas fa-times"></button>
@@ -33,7 +39,7 @@ export default function Home() {
               <Link href="/booking" className="nav-link">Booking</Link>
             </li>
             <li className="nav-item">
-              <Link href="/ubministries" className="nav-link">Ministries (non-profit)</Link>
+              <Link href="/ministries" className="nav-link">Ministries (non-profit)</Link>
             </li>
           </ul>
 
@@ -49,11 +55,16 @@ export default function Home() {
               <div className="buttons"></div>
             </div>
             <div className="hero-image-wrapper">
-              <img src="" alt="" className="hero-image"/>
+              <img src="null" alt="" className="hero-image"/>
             </div>
           </div>
         </section>
       </main>
-        </>
+
+      <Script
+        src="/scripts/script.js"
+        strategy="lazyOnload"
+        />
+      </>
   );
 }

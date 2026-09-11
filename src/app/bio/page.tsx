@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Bio() {
@@ -6,10 +7,11 @@ export default function Bio() {
       <header>
         <nav className="navbar section-content">
           <Link href="/" className="nav-logo">
-            <img
-              src="/ublogo nobg.png"
+            <Image
+              src="/images/ublogo nobg.png"
               alt="Upward Bound Consulting & Coaching"
-              className="logo-image"
+              width = {75}
+              height = {75}
             />
           </Link>
 
@@ -56,7 +58,7 @@ export default function Bio() {
             </li>
 
             <li className="nav-item">
-              <Link href="/ubministries" className="nav-link">
+              <Link href="/ministries" className="nav-link">
                 Ministries (non-profit)
               </Link>
             </li>
@@ -76,10 +78,12 @@ export default function Bio() {
               <h2 className="title">Bio</h2>
 
               <div className="hero-image-wrapper">
-                <img
-                  src="/kah.jpg"
+                <Image
+                  src="/images/kah.jpg"
                   alt="Kimberly A. Houston"
-                  className="hero-image"
+                  fill
+                  sizes="(max-width: 500px) 100vw, 500px"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
 
