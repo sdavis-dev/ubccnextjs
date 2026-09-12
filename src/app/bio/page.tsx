@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from 'next/script';
 
 export default function Bio() {
   return (
@@ -151,6 +152,11 @@ export default function Bio() {
           </div>
         </section>
       </main>
+
+      <Script
+        src="/scripts/script.js"
+        strategy="lazyOnload"
+        />
     </>
   );
 }
