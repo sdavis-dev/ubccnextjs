@@ -99,11 +99,19 @@ main {
     background: var(--white-color);
 }
 
+.hero-section .info .title {
+    text-align: center;
+    color: var(--teal-color);
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
 .hero-details {
     display: flex;
     flex-direction: column;  /* Stacks Title, Image, and Text on top of each other */
     align-items: center;     /* Centers them horizontally */
     text-align: center;      /* Centers the text inside the title and paragraphs */
+    flex: 1;
 }
 
 .hero-section .section-content {
@@ -151,6 +159,43 @@ main {
     margin-right: 30px;
 }
 
+.hero-logo-box {
+    position: relative;
+    width: 500px;
+    height: 200px;
+
+    margin: 0 auto;
+}
+
+.ministry-info .info {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.embla__slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background-color: var(--white-color);
+    border-radius: 8px;
+}
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
     body.show-mobile-menu header::before {
@@ -225,7 +270,7 @@ main {
     .hero-section .section-content {
         gap: 50px;
         text-align: center;
-        padding: 30px 20px 20px;
+        
         flex-direction: column-reverse;
         text-align: center;
     }
@@ -241,5 +286,14 @@ main {
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-right: 0;
+    }
+
+    .hero-logo-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .embla__slide img {
+        height: 250px;
     }
 }
