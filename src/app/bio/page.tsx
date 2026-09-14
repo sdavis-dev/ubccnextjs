@@ -41,7 +41,7 @@ export default function Bio() {
             </li>
 
             <li className="nav-item">
-              <Link href="/upcoming-events" className="nav-link">
+              <Link href="/events" className="nav-link">
                 Upcoming Events
               </Link>
             </li>
@@ -89,7 +89,7 @@ export default function Bio() {
               </div>
 
               <p className="description">
-                Kimberly A. Houston is the mother of one college
+                <b>K</b>imberly A. Houston is the mother of one college
                 graduate and one college sophomore student. She
                 is an Evangelist, Motivational Speaker, Life Coach
                 and Entrepreneur. She also served 8 years on the
@@ -99,8 +99,8 @@ export default function Bio() {
                 <br />
                 <br />
 
-                Kimberly has gained the title of “The Great
-                Motivator” because her ultimate goal is to impact,
+                Kimberly has gained the title of <i>“The Great
+                Motivator”</i> because her ultimate goal is to impact,
                 inspire, and transform lives for the betterment of
                 our entire community and the glory of God.
 
@@ -147,15 +147,34 @@ export default function Bio() {
                 Church under the dynamic leadership of Apostle John &
                 Linda Willis. There she serves as the Single’s Ministry
                 Director.
+
+                <br />
+                <br />
+
+                In closing, Kimberly's motto is: <br />
+                <i>"I'm just an ordinary woman, doing extraordinary things for God!"</i>
               </p>
             </div>
           </div>
         </section>
+        
       </main>
-
+      <footer className="footer-section">
+        <div className="container">
+          <ul className="flex-row">
+            <li>
+              <a href="https://www.facebook.com/iAmUpwardBound/" className="social-link"><i className="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" className="social-link"><i className="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+          <p>&copy; 2026 Upward Bounds Consulting & Coaching</p>
+          </div>
+        </footer>
       <Script
         src="/scripts/script.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         />
     </>
   );

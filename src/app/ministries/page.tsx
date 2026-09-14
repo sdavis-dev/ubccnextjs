@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from 'next/link';
 import { EmblaCarousel } from "../components/emblacarousel";
+import Script from "next/script";
 
 export default function UBMinistries() {
   return (
@@ -31,7 +32,7 @@ export default function UBMinistries() {
               <Link href="/payment" className="nav-link">Payment</Link>
             </li>
             <li className="nav-item">
-              <Link href="/upcoming-events" className="nav-link">Upcoming Events</Link>
+              <Link href="/events" className="nav-link">Upcoming Events</Link>
             </li>
             <li className="nav-item">
               <Link href="/contact" className="nav-link">Contact</Link>
@@ -72,7 +73,7 @@ export default function UBMinistries() {
             <p className="info">📖 <b>Wednesday Night Bible Study</b>
             <br></br>Join us every Wednesday at <b>8:00 PM</b> for Bible Study, hosted by our ministries and streamed live on <b>Facebook Live</b>. 
             <br></br>We’d love for you to join us!
-            <br></br> <br></br>☀️ **<b>Sunday Morning Inspiration</b>
+            <br></br> <br></br>☀️<b>Sunday Morning Inspiration</b>
             <br></br>Start your Sunday with a message of hope, faith, and encouragement at <b>7:00 AM on 95.1 FM</b>.
             <br></br> <br></br>📍 <b>Stay Connected</b>
             <br></br><b>Upward Bound Consulting & Coaching</b>
@@ -84,6 +85,23 @@ export default function UBMinistries() {
           </div>
         </section>
       </main>
+      <footer className="footer-section">
+        <div className="container">
+          <ul className="flex-row">
+            <li>
+              <a href="https://www.facebook.com/iAmUpwardBound/" className="social-link"><i className="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" className="social-link"><i className="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+          <p>&copy; 2026 Upward Bounds Consulting & Coaching</p>
+          </div>
+        </footer>
+      <Script
+        src="/scripts/script.js"
+        strategy="lazyOnload"
+        />
       </>
   );
 }
