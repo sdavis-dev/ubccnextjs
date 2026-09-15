@@ -89,70 +89,57 @@ export default function Bio() {
               </div>
 
               <p className="description">
-                <b>K</b>imberly A. Houston is the mother of one college
-                graduate and one college sophomore student. She
+                <b>K</b>imberly A. Houston is the proud mother of two young adults. She
                 is an Evangelist, Motivational Speaker, Life Coach
                 and Entrepreneur. She also served 8 years on the
-                Meridian City Council. She is currently seeking the
-                office of Lauderdale County Circuit Clerk.
+                Meridian City Council and continues to serve in leadership roles on various boards and organizations
 
                 <br />
                 <br />
 
-                Kimberly has gained the title of <i>“The Great
-                Motivator”</i> because her ultimate goal is to impact,
-                inspire, and transform lives for the betterment of
-                our entire community and the glory of God.
+                Kimberly has gained the title of <i>“The Hope
+                Dealer”</i> because she is committed to helping people rise to the next level in
+                every area of their lives. <br />Her mission in three words: Impact - Inspire - Transform.
 
                 <br />
                 <br />
 
                 She is a graduate of The University of West
                 Alabama and has owned and operated Houston Insurance
-                Agency, LLC since December 1998. Kimberly has been
-                named Who’s Who among Executives and Professionals.
+                Agency, LLC since December 1998. As a leader among her peers,
+                Kimberly has been named Who's Who among Executives and Professionals.
 
                 <br />
                 <br />
 
-                Kim continues to take an active interest in the welfare
-                of youth by serving as President of the Meridian Public
-                School District Board of Trustees, the President of the
-                Meridian Lauderdale County Public Library Board and she
-                is the founder of (SDLA) Sarah’s Daughters Leadership
-                Academy.
+                Kim continues to take an active interest in the welfare of youth by serving on the
+                Meridian Public School District Board of Trustees, the Meridian Lauderdale
+                County Public Library Board and she is the founder of (SDLA) Sarah’s Daughters
+                Leadership Academy. She also supports individuals with disabilities through her
+                involvement with the Meridian First Ladies Civitan Club.
 
                 <br />
                 <br />
 
-                As you can see, she loves to serve and as President of
-                the Meridian First Ladies Civitan Club she is committed
-                to helping individuals with disabilities.
+                Evangelist Houston is the daughter of Pastor James &amp; Rebecca Barney, and
+                founder of Upward Bound Ministries. You can listen to her every Sunday morning
+                at 7:00CST on 95.1FM The Beat <a href="https://www.thebeat951.com">here</a>. If Spiritual Enrichment is what you
+                need, join her via Facebook Live 8:00 CST Wednesday nights for virtual Bible at
+                Study <a href="https://facebook.com/iamupwardbound">here</a>. You can also make plans to travel
+                with her to Gatlinburg, TN for her annual Spiritual Renewal retreat.
 
                 <br />
                 <br />
 
-                Evangelist Houston is the daughter of Pastor James &
-                Rebecca Barney, and founder of Upward Bound Ministries.
-                You can listen to her every Sunday at 7AM on 95.1FM.
-                If you have Facebook, you can join her 8pm Wednesday
-                night virtual Bible Study. And when you need spiritual
-                enrichment or mentorship join her on one of her annual
-                retreats to Gatlinburg, TN.
-
-                <br />
-                <br />
-
-                She is a proud member of the Agape Storehouse Apostolic
-                Church under the dynamic leadership of Apostle John &
-                Linda Willis. There she serves as the Single’s Ministry
-                Director.
+                She is a proud member of the Agape Storehouse Apostolic Church under the
+                dynamic leadership and covering of Apostle John &amp; Linda Willis. There she serves
+                as the Single’s Ministry Director.
 
                 <br />
                 <br />
 
                 In closing, Kimberly's motto is: <br />
-                <i>"I'm just an ordinary woman, doing extraordinary things for God!"</i>
+                <i>"I'm just an ordinary woman, doing extraordinary things for God and community!"</i>
               </p>
             </div>
           </div>
