@@ -46,7 +46,7 @@ header {
 
 header .navbar {
     display: flex;
-    padding: 20px;
+    padding: 10px 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -63,26 +63,49 @@ header .navbar {
 
 .navbar .nav-menu {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
 }
 
 .navbar .nav-menu .nav-link {
-    padding: 10px 18px;
+    padding: 10px 14px;
     color: var(--white-color);
     font-size: 15px;
-    background: var(--teal-color);
-    border-radius: 15px;
+    background: transparent;
+    border-radius: 20px;
     transition: 0.3s ease;
 }
 
 .navbar .nav-menu .nav-link:hover {
-    color: var(--white-color);
+    color: var(--light-teal-color);
     background: var(--cream-color);
 }
 
 .navbar :where(#menu-close-button, #menu-open-button) {
         display: none;
     }
+
+.booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 8px;
+
+    color: white;
+    background: #d4a24c;
+
+    border-radius: 25px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.booking-button:hover {
+    background: #b88735;
+    color: white;
+}
 
 main {
     display: flex;
@@ -94,6 +117,103 @@ main {
 }
 
 /* hero section */
+.hero {
+    background: var(--white-color);
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.hero-image {
+    position: relative;
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.hero-eyebrow {
+    color: var(--teal-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    color: var(--teal-color);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-description {
+    color: #444;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.hero-values {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--light-teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.hero-button.primary {
+    color: var(--white-color);
+    background: var(--teal-color);
+}
+
+.hero-button.primary:hover {
+    background: var(--light-teal-color);
+}
+
+.hero-button.secondary {
+    color: var(--teal-color);
+    border: 2px solid var(--teal-color);
+}
+
+.hero-button.secondary:hover {
+    color: var(--white-color);
+    background: var(--teal-color);
+}
+
 .hero-section {
     min-height: 100vh;
     background: var(--white-color);
@@ -217,7 +337,7 @@ footer {
     content: "";
     position: fixed;
     inset: 0;
-    backdrop-filter: blur(50x);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(50px);
     background: rgba(0, 0, 0, 0.2);
     z-index: 998;
@@ -243,12 +363,16 @@ footer {
     .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: 1.3rem;
+        border: none;
+        background: transparent;
+        cursor: pointer;
     }
 
     .navbar #menu-close-button {
         position: absolute;
         right: 30px;
         top: 30px;
+        color: var(--white-color);
     }
 
     .navbar #menu-open-button {
@@ -270,15 +394,26 @@ footer {
     z-index: 999;
 }
 
-    body.show-mobile-menu .navbar .nav-menu {
+    .navbar .nav-menu.show {
         left: 0;
     }
 
     .navbar .nav-menu .nav-link {
-        color: black;
+        color: var(--white-color);
         display: block;
         margin-top: 17px;
         font-size: 1.3rem;
+        background: transparent;
+    }
+
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--cream-color);
+        background: transparent;
+    }
+
+    .navbar .nav-menu .booking-button {
+        margin-top: 20px;
+        margin-left: 0;
     }
 
     .hero-section .section-content {
@@ -306,6 +441,39 @@ footer {
         width: 200px;
         height: 200px;
     }
+
+    .hero {
+    min-height: auto;
+}
+
+.hero-content {
+    padding: 70px 25px;
+}
+
+.hero-text {
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+}
+
+.hero-values {
+    flex-wrap: wrap;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.hero-button {
+    width: 100%;
+}
 
     .embla__slide img {
         height: 250px;

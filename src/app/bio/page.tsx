@@ -1,76 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from 'next/script';
+import Navbar from "../components/Navbar";
 
 export default function Bio() {
   return (
     <>
-      <header>
-        <nav className="navbar section-content">
-          <Link href="/" className="nav-logo">
-            <Image
-              src="/images/ublogo nobg.png"
-              alt="Upward Bound Consulting & Coaching"
-              width = {75}
-              height = {75}
-            />
-          </Link>
-
-          <ul className="nav-menu">
-            <button
-              id="menu-close-button"
-              className="fas fa-times"
-            ></button>
-
-            <li className="nav-item">
-              <Link href="/bio" className="nav-link">
-                Bio
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/calendar" className="nav-link">
-                Calendar
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/payment" className="nav-link">
-                Payment
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/events" className="nav-link">
-                Upcoming Events
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/contact" className="nav-link">
-                Contact
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/booking" className="nav-link">
-                Booking
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/ministries" className="nav-link">
-                Ministries (non-profit)
-              </Link>
-            </li>
-          </ul>
-
-          <button
-            id="menu-open-button"
-            className="fas fa-bars"
-          ></button>
-        </nav>
-      </header>
+      <Navbar />
 
       <main>
         <section className="hero-section">
