@@ -51,16 +51,6 @@ header .navbar {
     justify-content: space-between;
 }
 
-.logo-image {
-    width: 100px;
-    height: 100px;
-}
-
-.navbar .nav-logo .logo-text {
-    color: var(--white-color);
-
-}
-
 .navbar .nav-menu {
     display: flex;
     align-items: center;
@@ -105,15 +95,6 @@ header .navbar {
 .booking-button:hover {
     background: #b88735;
     color: white;
-}
-
-main {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically if main has a height */
-    min-height: 100vh;       /* Makes it take up the full screen height */
-    padding: 20px;
-    background-color: #f9f9f9; /* Optional: light background color */
 }
 
 /* hero section */
@@ -214,122 +195,825 @@ main {
     background: var(--teal-color);
 }
 
-.hero-section {
-    min-height: 100vh;
-    background: var(--white-color);
-}
-
-.hero-section .info .title {
-    text-align: center;
-    color: var(--teal-color);
-    margin-bottom: 25px;
-    margin-top: 25px;
-}
-
-.hero-details {
-    display: flex;
-    flex-direction: column;  /* Stacks Title, Image, and Text on top of each other */
-    align-items: center;     /* Centers them horizontally */
-    text-align: center;      /* Centers the text inside the title and paragraphs */
-    flex: 1;
-}
-
-.hero-section .section-content {
-    display: flex;
-    align-items: center;
-    color: var(--teal-color);
-    justify-content: space-between;
-}
-
-.hero-section .hero-details .title {
-    font-size: 2.3rem;
-}
-
-.hero-section .hero-details .description {
-    font-size: 1.12rem;
-    margin: 24px 0 40px;
-    max-width: 70%;
-}
-
-.hero-section .hero-details .buttons {
-    display: flex;
-    gap: 23px;
-}
-
-.hero-section .hero-details .button {
-    padding: 10px 26px;
-    border: 2px solid transparent;
-    color: var(--white-color);
-    border-radius: 30px;
+/* Mission */
+.mission {
     background: var(--teal-color);
-    font-weight: 500;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.hero-section .hero-details .button:hover {
-    color: var(--teal-color);
-    background: transparent;
-    border-color: var(--teal-color);
-}
-
-.hero-section .hero-image-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1/1;
-    margin-right: 30px;
-}
-
-.hero-logo-box {
-    position: relative;
-    width: 500px;
-    height: 200px;
-
+.mission-content {
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.ministry-info .info {
+.mission-eyebrow {
+    color: var(--cream-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.mission h2 {
+    color: var(--white-color);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 25px;
+}
+
+.mission-description {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+/* Services */
+.services {
+    background: #f9f9f9;
+    padding: 100px 20px;
+}
+
+.services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-header {
+    max-width: 750px;
+    margin: 0 auto 60px;
     text-align: center;
-    margin-top: 25px;
+}
+
+.services-eyebrow {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.services-header h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.services-header > p:last-child {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--white-color);
+    padding: 35px 30px;
+    border-radius: 12px;
+    border-top: 4px solid var(--teal-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    color: #d4a24c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--teal-color);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Who I Help */
+.who-i-help {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.who-i-help-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.who-i-help-header {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.who-i-help-eyebrow {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.who-i-help-header h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.who-i-help-header > p:last-child {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.audience-card {
+    padding: 35px 25px;
+    text-align: center;
+    border: 2px solid var(--cream-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.audience-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--teal-color);
+}
+
+.audience-card h3 {
+    color: var(--teal-color);
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.audience-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Meet Kimberly */
+.meet-kimberly {
+    background: var(--cream-color);
+    padding: 100px 20px;
+}
+
+.meet-kimberly-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.meet-kimberly-image {
+    position: relative;
+    min-height: 500px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.meet-kimberly-image img {
+    object-fit: cover;
+}
+
+.meet-kimberly-text {
+    max-width: 550px;
+}
+
+.meet-kimberly-eyebrow {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.meet-kimberly-text h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.meet-kimberly-text p:not(.meet-kimberly-eyebrow) {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.meet-kimberly-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 25px;
+    color: var(--white-color);
+    background: var(--teal-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.meet-kimberly-button:hover {
+    background: var(--light-teal-color);
+}
+
+.meet-kimberly-button span {
+    font-size: 1.1rem;
+}
+
+/* Bio */
+.bio-intro {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.bio-intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.bio-intro-image {
+    position: relative;
+    min-height: 500px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.bio-intro-image img {
+    object-fit: cover;
+}
+
+.bio-intro-text {
+    position: relative;
+    z-index: 1;
+}
+
+.bio-eyebrow {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.bio-intro-text h1 {
+    color: var(--teal-color);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.bio-intro-text p:not(.bio-eyebrow) {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.bio-hope-dealer {
+    background: var(--teal-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.bio-hope-dealer-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.bio-hope-dealer .bio-eyebrow {
+    color: var(--cream-color);
+}
+
+.bio-hope-dealer h2 {
+    color: var(--white-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.bio-hope-dealer-content > p:not(.bio-eyebrow):not(.bio-mission) {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.bio-mission {
+    margin-top: 35px;
+    color: var(--cream-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bio-education {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.bio-education-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.bio-education-heading {
+    max-width: 500px;
+}
+
+.bio-education-heading h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.bio-education-text {
+    max-width: 600px;
+}
+
+.bio-education-text p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.bio-leadership {
+    background: #f9f9f9;
+    padding: 100px 20px;
+}
+
+.bio-leadership-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.bio-leadership-heading {
+    max-width: 450px;
+}
+
+.bio-leadership-heading h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.bio-leadership-text {
+    background: var(--white-color);
+    padding: 40px;
+    border-left: 5px solid var(--teal-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.bio-leadership-text p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.bio-ministry {
+    background: var(--teal-color);
+    padding: 100px 20px;
+}
+
+.bio-ministry-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.bio-ministry-heading {
+    max-width: 450px;
+}
+
+.bio-ministry-heading .bio-eyebrow {
+    color: var(--cream-color);
+}
+
+.bio-ministry-heading h2 {
+    color: var(--white-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.bio-ministry-text {
+    background: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.bio-ministry-text p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.bio-ministry-text a {
+    color: var(--teal-color);
+    font-weight: 700;
+}
+
+.bio-ministry-text a:hover {
+    text-decoration: underline;
+}
+
+.bio-faith {
+    background: var(--white-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.bio-faith-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.bio-faith .bio-eyebrow {
+    color: var(--teal-color);
+}
+
+.bio-faith h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.bio-faith-content > p:not(.bio-eyebrow) {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.bio-motto {
+    background: var(--teal-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.bio-motto-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bio-motto .bio-eyebrow {
+    color: var(--cream-color);
+    margin-bottom: 20px;
+}
+
+.bio-motto-intro {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.bio-motto blockquote {
+    color: var(--white-color);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.3;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Ministries Carousel */
+
+/* Ministries Carousel */
+
+.embla {
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .embla__viewport {
-  overflow: hidden;
-  width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
 }
 
 .embla__container {
-  display: flex;
-  touch-action: pan-y pinch-zoom;
+    display: flex;
 }
 
 .embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  display: flex;
-  justify-content: center;
+    flex: 0 0 100%;
+    min-width: 0;
 }
 
 .embla__slide img {
+    display: block;
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 500px;
     object-fit: contain;
-    background-color: var(--white-color);
-    border-radius: 8px;
 }
 
-footer {
-    color: white;
-    background-color: var(--light-teal-color);
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Site Footer */
+.site-footer {
+    background: #063f42;
+    padding: 60px 20px 0;
 }
 
-.footer-section :where(.social-link){
+.site-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.site-footer-brand h2 {
     color: var(--white-color);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.site-footer-brand p {
+    color: var(--cream-color);
+}
+
+.site-footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-footer-links a {
+    color: var(--white-color);
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.site-footer-links a:hover {
+    color: var(--cream-color);
+}
+
+.site-footer-social a {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.site-footer-social a:hover {
+    color: var(--cream-color);
+}
+
+.site-footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.site-footer-bottom p {
+    color: var(--white-color);
+    font-size: 0.85rem;
+}
+
+/* Ministries Hero */
+
+.ministries-hero {
+    background: var(--teal-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.ministries-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.ministries-eyebrow {
+    color: var(--cream-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.ministries-hero h1 {
+    color: var(--white-color);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.ministries-hero p:last-child {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Ministry Experiences */
+
+.ministries-gallery {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.ministries-gallery-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ministries-gallery-header {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.ministries-gallery-header .ministries-eyebrow {
+    color: var(--teal-color);
+}
+
+.ministries-gallery-header h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.ministries-gallery-header p:last-child {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Ministry Events */
+
+.ministry-events {
+    background: var(--cream-color);
+    padding: 100px 20px;
+}
+
+.ministry-events-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.ministry-event-card {
+    background: var(--white-color);
+    padding: 45px 40px;
+    border-radius: 14px;
+    border-top: 5px solid var(--teal-color);
+    text-align: center;
+}
+
+.ministry-event-icon {
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.ministry-event-card .ministries-eyebrow {
+    color: var(--teal-color);
+}
+
+.ministry-event-card h2 {
+    color: var(--teal-color);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.ministry-event-card p:not(.ministries-eyebrow) {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.ministry-event-card strong {
+    color: var(--teal-color);
+}
+
+.ministry-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 25px;
+    color: var(--white-color);
+    background: var(--teal-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.ministry-button:hover {
+    background: var(--light-teal-color);
+}
+
+/* Spiritual Renewal (commented it out for future opinion)
+
+.ministry-retreat {
+    background: var(--teal-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.ministry-retreat-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.ministry-retreat .ministries-eyebrow {
+    color: var(--cream-color);
+}
+
+.ministry-retreat h2 {
+    color: var(--white-color);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.ministry-retreat p:not(.ministries-eyebrow) {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.ministry-retreat .ministry-button {
+    background: var(--cream-color);
+    color: var(--teal-color);
+}
+
+.ministry-retreat .ministry-button:hover {
+    background: var(--white-color);
+} */
+
+/* Ministry Contact */
+
+.ministry-contact {
+    background: var(--white-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.ministry-contact-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.ministry-contact .ministries-eyebrow {
+    color: var(--teal-color);
+}
+
+.ministry-contact h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.ministry-contact-details {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
@@ -416,66 +1100,225 @@ footer {
         margin-left: 0;
     }
 
-    .hero-section .section-content {
-        gap: 50px;
-        text-align: center;
-        
-        flex-direction: column-reverse;
-        text-align: center;
+    .hero {
+        min-height: auto;
     }
 
-    .hero-section .hero-details :is(.description) {
+    .hero-content {
+        padding: 70px 25px;
+    }
+
+    .hero-text {
         max-width: 100%;
     }
 
-    .hero-section .hero-details .buttons {
-        justify-content: center;
+    .hero h1 {
+        font-size: 3.5rem;
     }
 
-    .hero-section .hero-image-wrapper {
-        max-width: 270px;
-        margin-right: 0;
+    .hero-description {
+        font-size: 1.1rem;
     }
 
-    .hero-logo-box {
-        width: 200px;
-        height: 200px;
+    .hero-values {
+        flex-wrap: wrap;
     }
 
-    .hero {
-    min-height: auto;
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+        .embla__slide img {
+            height: 400px; /* revert back to 250px whenever I get script to work on mobile */
+        }
+
+    .services {
+        padding: 75px 20px;
+    }
+
+    .services-header {
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+    .who-i-help {
+        padding: 75px 20px;
+    }
+
+    .who-i-help-header {
+        margin-bottom: 40px;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .meet-kimberly {
+        padding: 75px 20px;
+    }
+
+    .meet-kimberly-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .meet-kimberly-image {
+        min-height: 400px;
+    }
+
+    .meet-kimberly-text {
+        max-width: 100%;
+    }
+
+    .bio-intro {
+        padding: 75px 20px;
+    }
+
+    .bio-intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bio-intro-image {
+        min-height: 400px;
+    }
+
+    .bio-education {
+        padding: 75px 20px;
+    }
+
+    .bio-education-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bio-education-heading {
+        max-width: 100%;
+    }
+
+    .bio-education-text {
+        max-width: 100%;
+    }
+
+    .bio-leadership {
+        padding: 75px 20px;
+    }
+
+    .bio-leadership-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bio-leadership-heading {
+        max-width: 100%;
+    }
+
+    .bio-leadership-text {
+        padding: 30px 25px;
+    }
+
+    .bio-ministry {
+        padding: 75px 20px;
+    }
+
+    .bio-ministry-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bio-ministry-heading {
+        max-width: 100%;
+    }
+
+    .bio-ministry-text {
+        padding: 30px 25px;
+    }
+
+    .site-footer {
+        padding-top: 50px;
+    }
+
+    .site-footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .site-footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .site-footer-bottom {
+        margin-top: 40px;
+    }
+
+    /* Ministries Mobile */
+
+.ministries-hero {
+    padding: 75px 20px;
 }
 
-.hero-content {
-    padding: 70px 25px;
+.ministries-hero h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
 }
 
-.hero-text {
-    max-width: 100%;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-}
-
-.hero-description {
+.ministries-hero p:last-child {
     font-size: 1.1rem;
 }
 
-.hero-values {
-    flex-wrap: wrap;
+.ministries-gallery {
+    padding: 75px 20px;
 }
 
-.hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
+.ministries-gallery-header {
+    margin-bottom: 40px;
 }
 
-.hero-button {
-    width: 100%;
+.embla {
+    max-width: 100%;
 }
 
-    .embla__slide img {
-        height: 250px;
-    }
+.embla__slide img {
+    max-height: 400px;
+}
+
+.ministry-events {
+    padding: 75px 20px;
+}
+
+.ministry-events-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.ministry-event-card {
+    padding: 35px 25px;
+}
+
+.ministry-event-card h2 {
+    font-size: 2.2rem;
+}
+
+.ministry-retreat {
+    padding: 75px 20px;
+}
+
+.ministry-contact {
+    padding: 75px 20px;
+}
 }
