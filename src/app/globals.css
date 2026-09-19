@@ -73,7 +73,7 @@ header .navbar {
 
 .navbar :where(#menu-close-button, #menu-open-button) {
         display: none;
-    }
+}
 
 .booking-button {
     display: inline-block;
@@ -109,18 +109,26 @@ header .navbar {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 70px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 650px;
 }
 
 .hero-image {
     position: relative;
-    width: 50%;
-    height: 600px;
+    min-height: 450px;
+    border-radius: 14px;
     overflow: hidden;
 }
 
-.hero-text {
-    max-width: 750px;
+.hero-image img {
+    object-fit: cover;
 }
 
 .hero-eyebrow {
@@ -712,8 +720,6 @@ header .navbar {
 
 /* Ministries Carousel */
 
-/* Ministries Carousel */
-
 .embla {
     overflow: hidden;
     max-width: 900px;
@@ -1015,6 +1021,139 @@ header .navbar {
     font-size: 1.1rem;
     line-height: 1.8;
 }
+
+/* Experiences */
+.experiences {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.experiences-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experiences-header {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.experiences-eyebrow {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.experiences-header h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.experiences-header p:last-child {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.experience-card {
+    background: var(--cream-color);
+    padding: 40px 35px;
+    border-radius: 14px;
+    border-top: 5px solid var(--teal-color);
+}
+
+.experience-card h3 {
+    color: var(--teal-color);
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.experience-card a {
+    color: var(--teal-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.experience-card a:hover {
+    color: var(--light-teal-color);
+}
+
+.final-cta {
+    background: var(--teal-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.final-cta-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.final-cta-eyebrow {
+    color: var(--cream-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.final-cta h2 {
+    color: var(--white-color);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.final-cta-content > p:not(.final-cta-eyebrow) {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.final-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    color: var(--teal-color);
+    background: var(--cream-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.final-cta-button:hover {
+    color: var(--teal-color);
+    background: var(--white-color);
+}
+
+.final-cta-button span {
+    font-size: 1.1rem;
+}
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
     body.show-mobile-menu header::before {
@@ -1101,15 +1240,21 @@ header .navbar {
     }
 
     .hero {
-        min-height: auto;
+    min-height: auto;
     }
 
     .hero-content {
-        padding: 70px 25px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 75px 20px;
     }
 
     .hero-text {
         max-width: 100%;
+    }
+
+    .hero-image {
+        min-height: 400px;
     }
 
     .hero h1 {
@@ -1132,11 +1277,6 @@ header .navbar {
     .hero-button {
         width: 100%;
     }
-
-        .embla__slide img {
-            height: 400px; /* revert back to 250px whenever I get script to work on mobile */
-        }
-
     .services {
         padding: 75px 20px;
     }
@@ -1320,5 +1460,34 @@ header .navbar {
 
 .ministry-contact {
     padding: 75px 20px;
+}
+
+.experiences {
+    padding: 75px 20px;
+}
+
+.experiences-header {
+    margin-bottom: 40px;
+}
+
+.experiences-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.experience-card {
+    padding: 35px 25px;
+}
+
+.final-cta {
+    padding: 75px 20px;
+}
+
+.final-cta h2 {
+    font-size: clamp(2.3rem, 9vw, 3.5rem);
+}
+
+.final-cta-content > p:not(.final-cta-eyebrow) {
+    font-size: 1.1rem;
 }
 }

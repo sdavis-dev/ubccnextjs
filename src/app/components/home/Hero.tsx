@@ -7,17 +7,13 @@ export default function Hero() {
             <div className="hero-content">
 
                 <div className="hero-text">
-                    <p className="hero-eyebrow">
-                        I'M THE
-                    </p>
+                    <p className="hero-eyebrow">I&apos;M A</p>
 
-                    <h1>
-                        "Hope Dealer."
-                    </h1>
+                    <h1>&quot;Hope Dealer.&quot;</h1>
 
                     <p className="hero-description">
                         I help individuals and organizations rise to the
-                        NEXT LEVEL in their personal and professional growth.
+                        Next Level in their personal and professional growth.
                     </p>
 
                     <div className="hero-values">
@@ -29,22 +25,27 @@ export default function Hero() {
                     </div>
 
                     <div className="hero-buttons">
-                        <Link
-                            href="/booking"
-                            className="hero-button primary"
-                        >
+                        <Link href="/booking" className="hero-button primary">
                             WORK WITH ME
                             <span>→</span>
                         </Link>
 
-                        <a
-                            href="#services"
-                            className="hero-button secondary"
-                        >
+                        <a href="#services" className="hero-button secondary">
                             EXPLORE SERVICES
                         </a>
                     </div>
                 </div>
+
+                <div className="hero-image">
+                    <Image
+                        src="/images/IMG_3914.jpeg"
+                        alt="Kimberly speaking on stage"
+                        fill
+                        priority
+                        sizes="(max-width: 900px) 100vw, 50vw"
+                    />
+                </div>
+
             </div>
         </section>
     );

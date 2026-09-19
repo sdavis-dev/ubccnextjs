@@ -7,6 +7,9 @@ import Mission from "./components/home/Mission";
 import Services from "./components/home/Services";
 import WhoIHelp from "./components/home/WhoIHelp";
 import MeetKimberly from "./components/home/MeetKimberly";
+import Experiences from "./components/home/Experiences";
+import FinalCTA from "./components/home/FinalCTA";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +20,9 @@ export default function Home() {
       <Services />
       <WhoIHelp />
       <MeetKimberly />
+      <Experiences />
+      <FinalCTA />
+      <Footer />
     </>
   );
 }
