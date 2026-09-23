@@ -40,7 +40,8 @@ export default function Contact() {
                             </h2>
 
                             <p>
-                                Have a question, want to work together,
+                                Have a question (like Keynote Speaking or Small Group Mastermind Classes),
+                                want to work together,
                                 or interested in bringing Upward Bound
                                 to your organization or event? Reach out
                                 using the information below.

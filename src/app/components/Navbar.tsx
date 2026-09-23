@@ -43,7 +43,7 @@ export default function Navbar() {
                         </Link>
                     </li>
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link
                             href="/calendar"
                             className="nav-link"
@@ -51,9 +51,9 @@ export default function Navbar() {
                         >
                             Calendar
                         </Link>
-                    </li>
+                    </li> */}
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link
                             href="/payment"
                             className="nav-link"
@@ -61,7 +61,7 @@ export default function Navbar() {
                         >
                             Payment
                         </Link>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                         <Link
