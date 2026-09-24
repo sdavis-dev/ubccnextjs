@@ -45,23 +45,13 @@ export default function Navbar() {
 
                     <li className="nav-item">
                         <Link
-                            href="/event"
+                            href="/events"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Events
                         </Link>
                     </li>
-
-                    {/* <li className="nav-item">
-                        <Link
-                            href="/payment"
-                            className="nav-link"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Payment
-                        </Link>
-                    </li> */}
 
                     <li className="nav-item">
                         <Link
