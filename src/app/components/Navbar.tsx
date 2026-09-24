@@ -75,7 +75,7 @@ export default function Navbar() {
 
                     <li className="nav-item">
                         <Link
-                            href="Ministries"
+                            href="/ministries"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
                         >
