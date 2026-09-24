@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,15 +43,15 @@ export default function Navbar() {
                         </Link>
                     </li>
 
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                         <Link
-                            href="/calendar"
+                            href="/event"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Calendar
+                            Events
                         </Link>
-                    </li> */}
+                    </li>
 
                     {/* <li className="nav-item">
                         <Link
@@ -65,16 +65,6 @@ export default function Navbar() {
 
                     <li className="nav-item">
                         <Link
-                            href="/events"
-                            className="nav-link"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Events
-                        </Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link
                             href="/contact"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
@@ -85,7 +75,7 @@ export default function Navbar() {
 
                     <li className="nav-item">
                         <Link
-                            href="/ministries"
+                            href="Ministries"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
                         >

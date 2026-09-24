@@ -1,4 +1,4 @@
- import Cal, { getCalApi } from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 export default function CalCalendar1Hr() {
   useEffect(() => {

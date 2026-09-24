@@ -12,7 +12,7 @@ export default function Footer() {
 
                 <div className="site-footer-links">
                     <Link href="/bio">Bio</Link>
-                    <Link href="/calendar">Calendar</Link>
+                    <Link href="/calendar"></Link>
                     <Link href="/events">Events</Link>
                     <Link href="/contact">Contact</Link>
                     <Link href="/booking">Book a Consultation</Link>

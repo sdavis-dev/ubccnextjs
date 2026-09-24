@@ -1347,6 +1347,84 @@ header .navbar {
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
+.paid-consultation-header {
+    margin-top: 100px;
+}
+
+/* Calendar */
+
+.calendar-hero {
+    background: var(--teal-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.calendar-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.calendar-eyebrow {
+    color: var(--cream-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.calendar-hero h1 {
+    color: var(--white-color);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.calendar-hero p:last-child {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.calendar-booking {
+    background: var(--white-color);
+    padding: 100px 20px;
+}
+
+.calendar-booking-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calendar-booking-header {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.calendar-booking-header .calendar-eyebrow {
+    color: var(--teal-color);
+}
+
+.calendar-booking-header h2 {
+    color: var(--teal-color);
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.calendar-booking-header p:last-child {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.calendar-embed {
+    max-width: 1100px;
+    margin: 0 auto;
+}
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
     body.show-mobile-menu header::before {
@@ -1393,6 +1471,11 @@ header .navbar {
 
     .navbar #menu-open-button {
         color: var(--white-color);
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        position: relative;
+        z-index: 1000;
     }
 
     .navbar .nav-menu {
@@ -1713,5 +1796,57 @@ header .navbar {
 
 .contact-form-wrapper {
     padding: 35px 25px;
+}
+
+/* Calendar Mobile */
+.calendar-hero {
+    padding: 75px 20px;
+}
+
+.calendar-hero h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+}
+
+.calendar-hero p:last-child {
+    font-size: 1.1rem;
+}
+
+.calendar-booking {
+    padding: 75px 20px;
+}
+
+.calendar-booking-header {
+    margin-bottom: 40px;
+}
+
+.calendar-booking-header h2 {
+    font-size: clamp(2.3rem, 9vw, 3.5rem);
+}
+
+.calendar-booking-header p:last-child {
+    font-size: 1.1rem;
+}
+
+.calendar-embed {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.calendar-booking-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.calendar-embed > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.paid-consultation-header {
+    margin-top: 75px;
 }
 }
