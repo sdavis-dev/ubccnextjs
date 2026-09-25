@@ -751,7 +751,7 @@ header .navbar {
 /* Site Footer */
 .site-footer {
     background: #063f42;
-    padding: 45px 20px 0;
+    padding: 60px 20px 0;
 }
 
 .site-footer-content {
@@ -1274,7 +1274,7 @@ header .navbar {
 }
 
 .contact-form-button {
-    align-self: center;
+    align-self: flex-start;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1424,146 +1424,6 @@ header .navbar {
 .calendar-embed {
     max-width: 1100px;
     margin: 0 auto;
-}
-
-/* Events */
-
-.events-hero {
-    background: var(--teal-color);
-    padding: 110px 20px;
-    text-align: center;
-}
-
-.events-hero-content {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.events-eyebrow {
-    color: var(--cream-color);
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.events-hero h1 {
-    color: var(--white-color);
-    font-size: clamp(3rem, 6vw, 5rem);
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
-
-.events-hero p:last-child {
-    color: var(--white-color);
-    font-size: 1.25rem;
-    line-height: 1.7;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.events-main {
-    background: var(--white-color);
-    padding: 100px 20px;
-}
-
-.events-main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.events-empty {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 65px 50px;
-    background: var(--cream-color);
-    border-radius: 14px;
-    text-align: center;
-}
-
-.events-empty .events-eyebrow {
-    color: var(--teal-color);
-}
-
-.events-empty h2 {
-    color: var(--teal-color);
-    font-size: clamp(2.3rem, 5vw, 3.5rem);
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-.events-empty p:last-child {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.event-card {
-    background: var(--cream-color);
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-.event-card-date {
-    background: var(--teal-color);
-    color: var(--white-color);
-    padding: 18px 25px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.event-card-content {
-    padding: 30px;
-}
-
-.event-location {
-    color: var(--teal-color);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.event-card h2 {
-    color: var(--teal-color);
-    font-size: 1.7rem;
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.event-card-content > p:last-of-type {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-
-.event-card-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--teal-color);
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.event-card-button span {
-    font-size: 1.1rem;
-}
-
-.event-card-button:hover {
-    color: var(--light-teal-color);
 }
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
@@ -1910,7 +1770,7 @@ header .navbar {
 /* Contact Mobile */
 
 .contact-hero {
-    padding: 65px 20px;
+    padding: 75px 20px;
 }
 
 .contact-hero h1 {
@@ -1922,7 +1782,7 @@ header .navbar {
 }
 
 .contact-main {
-    padding: 65px 20px;
+    padding: 75px 20px;
 }
 
 .contact-main-content {
@@ -1988,40 +1848,5 @@ header .navbar {
 
 .paid-consultation-header {
     margin-top: 75px;
-}
-
-/* Events Mobile */
-
-.events-hero {
-    padding: 65px 20px;
-}
-
-.events-hero h1 {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-}
-
-.events-hero p:last-child {
-    font-size: 1.1rem;
-}
-
-.events-main {
-    padding: 60px 20px;
-}
-
-.events-empty {
-    padding: 50px 25px;
-}
-
-.events-empty h2 {
-    font-size: clamp(2.3rem, 9vw, 3.5rem);
-}
-
-.events-empty p:last-child {
-    font-size: 1.1rem;
-}
-
-.events-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
 }
 }
