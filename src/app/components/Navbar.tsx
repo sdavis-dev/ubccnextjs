@@ -45,7 +45,7 @@ export default function Navbar() {
 
                     <li className="nav-item">
                         <Link
-                            href="/event"
+                            href="/events"
                             className="nav-link"
                             onClick={() => setIsMenuOpen(false)}
                         >
