@@ -26,7 +26,7 @@ export default function LogoutButton() {
             </button>
             { isDialogOpen && (
                 <div>
-                    Dialog Test
+                    Are you sure you want to logout?
 
                     <button onClick={() => setIsDialogOpen(false)}>
                         Cancel
