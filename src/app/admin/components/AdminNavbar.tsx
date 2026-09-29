@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState} from "react";
+import { useState } from "react";
 import LogoutButton from "./LogoutButton";
 
 export default function AdminNavbar() {
     const [isAdminNavOpen, setIsAdminNavOpen] = useState(false);
+
+    function closeMenu() {
+        setIsAdminNavOpen(false);
+    }
 
     return (
         <header>
@@ -16,15 +20,25 @@ export default function AdminNavbar() {
                     <button
                         id="menu-close-button"
                         className="fas fa-times"
-                        onClick={() => setIsAdminNavOpen(false)}
+                        onClick={closeMenu}
                         aria-label="Close menu"
                     />
 
                     <li className="admin-nav-item">
                         <Link
+                            href="/admin"
+                            className="nav-link"
+                            onClick={closeMenu}
+                        >
+                            Dashboard
+                        </Link>
+                    </li>
+
+                    <li className="admin-nav-item">
+                        <Link
                             href="/admin/events"
                             className="nav-link"
-                            onClick={() => setIsAdminNavOpen(false)}
+                            onClick={closeMenu}
                         >
                             Events
                         </Link>
@@ -46,5 +60,4 @@ export default function AdminNavbar() {
             </nav>
         </header>
     );
-
 }

@@ -16,6 +16,7 @@ export default function Footer() {
                     <Link href="/contact">Contact</Link>
                     <Link href="/ministries">Ministries</Link>
                     <Link href="/booking">Book a Consultation</Link>
+                    <Link href="/admin/login">Admin</Link>
                 </div>
 
                 <div className="site-footer-social">

@@ -1565,6 +1565,28 @@ header .navbar {
 .event-card-button:hover {
     color: var(--light-teal-color);
 }
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 8px;
+
+    color: white;
+    background: #d4a24c;
+
+    border-radius: 25px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #b88735;
+    color: white;
+}
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
     body.show-mobile-menu header::before {

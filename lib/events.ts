@@ -1,17 +1,17 @@
-// import { Timestamp } from "next/dist/server/lib/cache-handlers/types";
 import { supabase } from "./supabase";
+
 /*
-CRUD - Read: 
-getPublishedEvents() gets all published events from the supabase db and 
-arragned them going down from oldest to newest published events
+CRUD - Read:
+getPublishedEvents() gets all published events from the Supabase database
+and orders them from newest to oldest.
 */
 export async function getPublishedEvents() {
     const { data, error } = await supabase
         .from("events")
         .select("*")
         .eq("status", "PUBLISHED")
-        .order("start_at", {ascending: false});
-    
+        .order("start_at", { ascending: false });
+
     if (error) {
         throw new Error(`Failed to fetch published events: ${error.message}`);
     }
@@ -20,11 +20,12 @@ export async function getPublishedEvents() {
 }
 
 export async function createEvent(
-    title: string, 
-    description: string, 
-    location: string, 
-    start_at: string, 
-    end_at: string) {
+    title: string,
+    description: string,
+    location: string,
+    start_at: string,
+    end_at: string
+) {
     const { data, error } = await supabase
         .from("events")
         .insert([
@@ -33,18 +34,17 @@ export async function createEvent(
                 description,
                 location,
                 start_at,
-                end_at
-            }
+                end_at,
+            },
         ])
-        .select()
-    
+        .select();
+
     if (error) {
         throw new Error(`Failed to create event: ${error.message}`);
     }
 
     return data;
 }
-// TODO: Look at getAllEvents, updateEvent, deleteEvent to understand how they work and test them 
 
 export async function getAllEvents() {
     const { data, error } = await supabase

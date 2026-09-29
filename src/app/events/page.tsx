@@ -1,45 +1,43 @@
-import Image from "next/image";
 import Link from "next/link";
-import Script from 'next/script';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { getPublishedEvents } from "@/lib/events";
 
-const events = [
-    {
-        title: "Test Event 1",
-        date: "October 18, 2026",
-        location: "Meridian, MS",
-        description:
-            "NA"
-    },
-    {
-        title: "Test Event 2",
-        date: "November 7–8, 2026",
-        location: "Meridian, MS",
-        description:
-            "NA"
-    },
-    {
-        title: "Test Event 3",
-        date: "December 5, 2026",
-        location: "Meridian, MS",
-        description:
-            "NA"
+function formatEventDate(startAt: string, endAt: string) {
+    const startDate = new Date(startAt);
+    const endDate = new Date(endAt);
+
+    const sameDay =
+        startDate.toDateString() === endDate.toDateString();
+
+    if (sameDay) {
+        return startDate.toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+        });
     }
-];
+
+    const start = startDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+    });
+
+    const end = endDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+    });
+
+    return `${start}–${end}`;
+}
 
 export default async function Events() {
-    const createEvents=await getPublishedEvents();
-    console.log(events);
+    const events = await getPublishedEvents();
+
     return (
         <>
             <Navbar />
-            <ul>
-              {createEvents.map((event) => (
-                <li key={event.id}>{event.title}</li>
-              ))}
-            </ul>
 
             <main className="events-page">
 
@@ -82,29 +80,44 @@ export default async function Events() {
                             </div>
                         ) : (
                             <div className="events-grid">
-                                {events.map((event, index) => (
-                                    <article className="event-card" key={index}>
+                                {events.map((event) => (
+                                    <article
+                                        className="event-card"
+                                        key={event.id}
+                                    >
 
                                         <div className="event-card-date">
-                                            {event.date}
+                                            {formatEventDate(
+                                                event.start_at,
+                                                event.end_at
+                                            )}
                                         </div>
 
                                         <div className="event-card-content">
-                                            <p className="event-location">
-                                                {event.location}
-                                            </p>
+
+                                            {event.location && (
+                                                <p className="event-location">
+                                                    {event.location}
+                                                </p>
+                                            )}
 
                                             <h2>
                                                 {event.title}
                                             </h2>
 
-                                            <p>
-                                                {event.description}
-                                            </p>
+                                            {event.description && (
+                                                <p>
+                                                    {event.description}
+                                                </p>
+                                            )}
 
-                                            <Link href="/contact" className="event-card-button">
+                                            <Link
+                                                href="/contact"
+                                                className="event-card-button"
+                                            >
                                                 LEARN MORE <span>→</span>
                                             </Link>
+
                                         </div>
 
                                     </article>
