@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { supabase } from "../../../../lib/supabase";
 import { useRouter } from "next/navigation";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export default function Login() {
     const router = useRouter();
@@ -50,28 +52,32 @@ export default function Login() {
     }
 
     return (
-        <form onSubmit={handleLogin}>
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(event) => {
-                    setEmail(event.target.value);
-                }}
-            />
+        <>  <Navbar />
+                <form onSubmit={handleLogin}>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(event) => {
+                            setEmail(event.target.value);
+                        }}
+                    />
 
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(event) => {
-                    setPassword(event.target.value);
-                }}
-            />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(event) => {
+                            setPassword(event.target.value);
+                        }}
+                    />
 
-            <button type="submit">
-                Login
-            </button>
-        </form>
+                    <button type="submit">
+                        Login
+                    </button>
+                </form>
+            <Footer />
+        </>
+        
     );
 }
