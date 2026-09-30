@@ -123,6 +123,7 @@ header .navbar {
 .hero-image {
     position: relative;
     min-height: 450px;
+    min-width: 750px;
     border-radius: 14px;
     overflow: hidden;
 }
@@ -396,7 +397,7 @@ header .navbar {
 
 .meet-kimberly-image {
     position: relative;
-    min-height: 500px;
+    min-height: 625px;
     border-radius: 14px;
     overflow: hidden;
 }
@@ -469,7 +470,7 @@ header .navbar {
 
 .bio-intro-image {
     position: relative;
-    min-height: 500px;
+    min-height: 750px;
     border-radius: 14px;
     overflow: hidden;
 }

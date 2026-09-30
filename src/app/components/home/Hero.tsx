@@ -38,7 +38,7 @@ export default function Hero() {
 
                 <div className="hero-image">
                     <Image
-                        src="/images/IMG_3914.jpeg"
+                        src="/images/IMG_3913.jpeg"
                         alt="Kimberly speaking on stage"
                         fill
                         priority

@@ -15,7 +15,7 @@ export default function Bio() {
 
                         <div className="bio-intro-image">
                             <Image
-                                src="/images/kah.jpg"
+                                src="/images/IMG_7726.jpeg"
                                 alt="Kimberly A. Houston"
                                 fill
                                 sizes="(max-width: 900px) 100vw, 50vw"

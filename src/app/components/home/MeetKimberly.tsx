@@ -8,7 +8,7 @@ export default function MeetKimberly() {
 
                 <div className="meet-kimberly-image">
                     <Image
-                        src="/images/IMG_3915.jpeg"
+                        src="/images/IMG_2486.jpeg"
                         alt="Kimberly speaking on stage"
                         fill
                         sizes="(max-width: 900px) 100vw, 50vw"
