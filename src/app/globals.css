@@ -1296,8 +1296,20 @@ header .navbar {
     background: var(--light-teal-color);
 }
 
+.contact-form-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 .contact-form-button span {
     font-size: 1.1rem;
+}
+
+.contact-form-status {
+    margin-top: 15px;
+    color: var(--teal-color);
+    font-size: 0.95rem;
+    font-weight: 700;
 }
 
 .contact-info > p:not(.contact-eyebrow) {
