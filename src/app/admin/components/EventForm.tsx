@@ -44,8 +44,11 @@ export default function EventForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
+        <form
+            className="admin-event-form"
+            onSubmit={handleSubmit}
+        >
+            <div className="admin-event-form-field">
                 <label htmlFor="title">
                     Title
                 </label>
@@ -61,7 +64,7 @@ export default function EventForm() {
                 />
             </div>
 
-            <div>
+            <div className="admin-event-form-field">
                 <label htmlFor="description">
                     Description
                 </label>
@@ -72,11 +75,12 @@ export default function EventForm() {
                     onChange={(event) =>
                         setDescription(event.target.value)
                     }
+                    rows={5}
                     required
                 />
             </div>
 
-            <div>
+            <div className="admin-event-form-field">
                 <label htmlFor="location">
                     Location
                 </label>
@@ -92,48 +96,67 @@ export default function EventForm() {
                 />
             </div>
 
-            <div>
-                <label htmlFor="startAt">
-                    Start Date and Time
-                </label>
+            <div className="admin-event-form-row">
+                <div className="admin-event-form-field">
+                    <label htmlFor="startAt">
+                        Start Date and Time
+                    </label>
 
-                <input
-                    id="startAt"
-                    type="datetime-local"
-                    value={startAt}
-                    onChange={(event) =>
-                        setStartAt(event.target.value)
-                    }
-                    required
-                />
+                    <input
+                        id="startAt"
+                        type="datetime-local"
+                        value={startAt}
+                        onChange={(event) =>
+                            setStartAt(event.target.value)
+                        }
+                        required
+                    />
+                </div>
+
+                <div className="admin-event-form-field">
+                    <label htmlFor="endAt">
+                        End Date and Time
+                    </label>
+
+                    <input
+                        id="endAt"
+                        type="datetime-local"
+                        value={endAt}
+                        onChange={(event) =>
+                            setEndAt(event.target.value)
+                        }
+                        required
+                    />
+                </div>
             </div>
 
-            <div>
-                <label htmlFor="endAt">
-                    End Date and Time
-                </label>
+            {error && (
+                <p className="admin-event-form-error">
+                    {error}
+                </p>
+            )}
 
-                <input
-                    id="endAt"
-                    type="datetime-local"
-                    value={endAt}
-                    onChange={(event) =>
-                        setEndAt(event.target.value)
+            <div className="admin-event-form-actions">
+                <button
+                    type="button"
+                    className="admin-secondary-button"
+                    onClick={() =>
+                        router.push("/admin/events")
                     }
-                    required
-                />
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    className="admin-primary-button"
+                    disabled={isSubmitting}
+                >
+                    {isSubmitting
+                        ? "Creating..."
+                        : "Create Event"}
+                </button>
             </div>
-
-            {error && <p>{error}</p>}
-
-            <button
-                type="submit"
-                disabled={isSubmitting}
-            >
-                {isSubmitting
-                    ? "Creating..."
-                    : "Create Event"}
-            </button>
         </form>
     );
 }

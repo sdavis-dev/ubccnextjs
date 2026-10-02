@@ -2,7 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase-server";
 import AdminNavbar from "../../../components/AdminNavbar";
 import EditEventForm from "../../../components/EditEventForm";
-import { getAllEvents } from "@/lib/events";
+import { getAllEventsForAdmin } from "@/lib/events-admin";
 
 type EditEventPageProps = {
     params: Promise<{
@@ -35,7 +35,7 @@ export default async function EditEventPage({
         redirect("/admin/login");
     }
 
-    const events = await getAllEvents();
+    const events = await getAllEventsForAdmin();
 
     const event = events.find(
         (currentEvent) => currentEvent.id === id

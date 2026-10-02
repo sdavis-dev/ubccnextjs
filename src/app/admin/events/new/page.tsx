@@ -28,10 +28,25 @@ export default async function NewEventPage() {
         <>
             <AdminNavbar />
 
-            <main>
-                <h1>Create Event</h1>
+            <main className="admin-edit-page">
+                <section className="admin-edit-container">
 
-                <EventForm />
+                    <div className="admin-edit-header">
+                        <p className="admin-eyebrow">
+                            EVENT MANAGEMENT
+                        </p>
+
+                        <h1>Create Event</h1>
+
+                        <p>
+                            Create a new event that can be
+                            published on the public website.
+                        </p>
+                    </div>
+
+                    <EventForm />
+
+                </section>
             </main>
         </>
     );

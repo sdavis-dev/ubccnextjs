@@ -33,21 +33,31 @@ export default async function AdminEventsPage() {
             <AdminNavbar />
 
             <main className="admin-events-page">
+
                 <section className="admin-events-header">
                     <div>
+                        <p className="admin-eyebrow">
+                            EVENT MANAGEMENT
+                        </p>
+
                         <h1>Events</h1>
 
                         <p>
-                            Manage events and upcoming activities.
+                            Manage Kim's upcoming events,
+                            published events, and drafts.
                         </p>
                     </div>
 
-                    <Link href="/admin/events/new">
+                    <Link
+                        href="/admin/events/new"
+                        className="admin-primary-button"
+                    >
                         Create Event
                     </Link>
                 </section>
 
                 <EventFilters events={allEvents} />
+
             </main>
         </>
     );

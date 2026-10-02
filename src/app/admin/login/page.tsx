@@ -48,36 +48,77 @@ export default function Login() {
         console.log("Admin profile:", profile);
 
         router.push("/admin");
-        
     }
 
     return (
-        <>  <Navbar />
-                <form onSubmit={handleLogin}>
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(event) => {
-                            setEmail(event.target.value);
-                        }}
-                    />
+        <>
+            <Navbar />
 
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(event) => {
-                            setPassword(event.target.value);
-                        }}
-                    />
+            <main className="admin-login-page">
+                <section className="admin-login-container">
 
-                    <button type="submit">
-                        Login
-                    </button>
-                </form>
+                    <div className="admin-login-header">
+                        <p className="admin-login-eyebrow">
+                            ADMIN PORTAL
+                        </p>
+
+                        <h1>Login to Your Account</h1>
+
+                        <p>
+                            Sign in to manage.
+                        </p>
+                    </div>
+
+                    <form
+                        className="admin-login-form"
+                        onSubmit={handleLogin}
+                    >
+                        <div className="admin-login-field">
+                            <label htmlFor="email">
+                                Email
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Enter your email"
+                                value={email}
+                                onChange={(event) => {
+                                    setEmail(event.target.value);
+                                }}
+                                required
+                            />
+                        </div>
+
+                        <div className="admin-login-field">
+                            <label htmlFor="password">
+                                Password
+                            </label>
+
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="Enter your password"
+                                value={password}
+                                onChange={(event) => {
+                                    setPassword(event.target.value);
+                                }}
+                                required
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="admin-login-button"
+                        >
+                            Login
+                        </button>
+                    </form>
+
+                </section>
+            </main>
+
             <Footer />
         </>
-        
     );
 }

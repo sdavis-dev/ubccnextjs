@@ -15,7 +15,11 @@ export default function AdminNavbar() {
         <header>
             <nav className="admin-navbar section-content">
 
-                <ul className={`nav-menu ${isAdminNavOpen ? "show" : ""}`}>
+                <ul
+                    className={`nav-menu ${
+                        isAdminNavOpen ? "show" : ""
+                    }`}
+                >
 
                     <button
                         id="menu-close-button"
@@ -53,7 +57,9 @@ export default function AdminNavbar() {
                 <button
                     id="menu-open-button"
                     className="fas fa-bars"
-                    onClick={() => setIsAdminNavOpen(true)}
+                    onClick={() =>
+                        setIsAdminNavOpen(true)
+                    }
                     aria-label="Open menu"
                 />
 

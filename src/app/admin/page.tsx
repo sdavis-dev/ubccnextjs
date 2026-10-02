@@ -50,7 +50,9 @@ export default async function AdminDashboard() {
 
         supabase
             .from("events")
-            .select("id, title, description, start_at, end_at, location, status")
+            .select(
+                "id, title, description, start_at, end_at, location, status"
+            )
             .gte("start_at", now)
             .neq("status", "CANCELLED")
             .order("start_at", { ascending: true })
@@ -58,87 +60,202 @@ export default async function AdminDashboard() {
     ]);
 
     if (eventsError) {
-        console.error("Error loading dashboard events:", eventsError);
+        console.error(
+            "Error loading dashboard events:",
+            eventsError
+        );
     }
 
     return (
         <>
             <AdminNavbar />
 
-            <main>
-                <section>
-                    <h1>Admin Dashboard</h1>
-                    <p>Welcome, {profile.full_name}</p>
-                    <p>
-                        Manage upcoming events and public event information
-                        from here.
-                    </p>
-                </section>
+            <main className="admin-dashboard">
 
-                <section>
-                    <h2>Overview</h2>
-
+                <section className="admin-dashboard-hero">
                     <div>
-                        <div>
-                            <h3>Upcoming Events</h3>
-                            <p>{upcomingEventsCount ?? 0}</p>
-                        </div>
+                        <p className="admin-eyebrow">
+                            ADMIN PORTAL
+                        </p>
 
-                        <div>
-                            <h3>Published Events</h3>
-                            <p>{publishedEventsCount ?? 0}</p>
-                        </div>
+                        <h1>Admin Dashboard</h1>
 
-                        <div>
-                            <h3>Draft Events</h3>
-                            <p>{draftEventsCount ?? 0}</p>
-                        </div>
+                        <p className="admin-dashboard-welcome">
+                            Welcome, {profile.full_name}
+                        </p>
+
+                        <p className="admin-dashboard-description">
+                            Manage upcoming events and public event
+                            information from here.
+                        </p>
                     </div>
                 </section>
 
-                <section>
-                    <div>
-                        <h2>Upcoming Events</h2>
+                <section className="admin-dashboard-section">
+                    <div className="admin-dashboard-section-header">
+                        <div>
+                            <p className="admin-eyebrow">
+                                OVERVIEW
+                            </p>
 
-                        <Link href="/admin/events">
-                            View All Events
-                        </Link>
-
-                        <Link href="/admin/events/new">
-                            Create Event
-                        </Link>
+                            <h2>Event Activity</h2>
+                        </div>
                     </div>
 
-                    {upcomingEvents && upcomingEvents.length > 0 ? (
+                    <div className="admin-stat-grid">
+
+                        <article className="admin-stat-card">
+                            <p>Upcoming Events</p>
+                            <h3>
+                                {upcomingEventsCount ?? 0}
+                            </h3>
+                        </article>
+
+                        <article className="admin-stat-card">
+                            <p>Published Events</p>
+                            <h3>
+                                {publishedEventsCount ?? 0}
+                            </h3>
+                        </article>
+
+                        <article className="admin-stat-card">
+                            <p>Draft Events</p>
+                            <h3>
+                                {draftEventsCount ?? 0}
+                            </h3>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section className="admin-dashboard-section">
+
+                    <div className="admin-dashboard-section-header">
                         <div>
+                            <p className="admin-eyebrow">
+                                SCHEDULE
+                            </p>
+
+                            <h2>Upcoming Events</h2>
+                        </div>
+
+                        <div className="admin-dashboard-actions">
+                            <Link
+                                href="/admin/events"
+                                className="admin-secondary-button"
+                            >
+                                View All Events
+                            </Link>
+
+                            <Link
+                                href="/admin/events/new"
+                                className="admin-primary-button"
+                            >
+                                Create Event
+                            </Link>
+                        </div>
+                    </div>
+
+                    {upcomingEvents &&
+                    upcomingEvents.length > 0 ? (
+                        <div className="admin-dashboard-events">
+
                             {upcomingEvents.map((event) => (
-                                <article key={event.id}>
-                                    <h3>{event.title}</h3>
+                                <article
+                                    className="admin-dashboard-event-card"
+                                    key={event.id}
+                                >
+                                    <div>
+                                        <p className="admin-event-status">
+                                            {event.status}
+                                        </p>
 
-                                    <p>
-                                        {new Date(event.start_at).toLocaleDateString()}
-                                        {" · "}
-                                        {new Date(event.start_at).toLocaleTimeString(
-                                            [],
-                                            {
-                                                hour: "numeric",
-                                                minute: "2-digit",
-                                            }
+                                        <h3>
+                                            {event.title}
+                                        </h3>
+                                    </div>
+
+                                    <div className="admin-dashboard-event-details">
+
+                                        <div>
+                                            <span>
+                                                Date
+                                            </span>
+
+                                            <p>
+                                                {new Date(
+                                                    event.start_at
+                                                ).toLocaleDateString(
+                                                    "en-US",
+                                                    {
+                                                        month: "long",
+                                                        day: "numeric",
+                                                        year: "numeric",
+                                                    }
+                                                )}
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <span>
+                                                Time
+                                            </span>
+
+                                            <p>
+                                                {new Date(
+                                                    event.start_at
+                                                ).toLocaleTimeString(
+                                                    "en-US",
+                                                    {
+                                                        hour: "numeric",
+                                                        minute: "2-digit",
+                                                    }
+                                                )}
+                                            </p>
+                                        </div>
+
+                                        {event.location && (
+                                            <div>
+                                                <span>
+                                                    Location
+                                                </span>
+
+                                                <p>
+                                                    {event.location}
+                                                </p>
+                                            </div>
                                         )}
-                                    </p>
 
-                                    {event.location && (
-                                        <p>{event.location}</p>
-                                    )}
-
-                                    <p>Status: {event.status}</p>
+                                    </div>
                                 </article>
                             ))}
+
                         </div>
                     ) : (
-                        <p>No upcoming events.</p>
+                        <div className="admin-dashboard-empty">
+                            <p className="admin-eyebrow">
+                                NO UPCOMING EVENTS
+                            </p>
+
+                            <h3>
+                                Nothing Scheduled Yet.
+                            </h3>
+
+                            <p>
+                                Create an event to get started.
+                            </p>
+
+                            <Link
+                                href="/admin/events/new"
+                                className="admin-primary-button"
+                            >
+                                Create Event
+                            </Link>
+                        </div>
                     )}
+
                 </section>
+
             </main>
         </>
     );
