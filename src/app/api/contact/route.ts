@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
         const { data, error } = await resend.emails.send({
             from: "Upward Bound <onboarding@resend.dev>",
-            to: "delivered@resend.dev",
+            to: "iamupwardbound@yahoo.com",
             subject: `New Contact Form Message from ${safeName}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
