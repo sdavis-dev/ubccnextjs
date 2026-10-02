@@ -27,10 +27,13 @@ export default function EditEventForm({
     const [location, setLocation] = useState(
         event.location ?? ""
     );
-    const [startAt, setStartAt] = useState(
+    const [start_at, setStartAt] = useState(
         event.start_at.slice(0, 16)
     );
-    const [endAt, setEndAt] = useState(
+    const [end_at, setEndAt] = useState(
+        event.end_at.slice(0, 16)
+    );
+    const [status, setStatus] = useState(
         event.end_at.slice(0, 16)
     );
 
@@ -51,8 +54,10 @@ export default function EditEventForm({
                 title,
                 description,
                 location,
-                startAt,
-                endAt
+                start_at,
+                end_at,
+                status
+                
             );
 
             router.push("/admin/events");
@@ -120,14 +125,14 @@ export default function EditEventForm({
 
             <div className="admin-event-form-row">
                 <div className="admin-event-form-field">
-                    <label htmlFor="startAt">
+                    <label htmlFor="start_at">
                         Start Date and Time
                     </label>
 
                     <input
-                        id="startAt"
+                        id="start_at"
                         type="datetime-local"
-                        value={startAt}
+                        value={start_at}
                         onChange={(event) =>
                             setStartAt(event.target.value)
                         }
@@ -136,14 +141,14 @@ export default function EditEventForm({
                 </div>
 
                 <div className="admin-event-form-field">
-                    <label htmlFor="endAt">
+                    <label htmlFor="end_at">
                         End Date and Time
                     </label>
 
                     <input
-                        id="endAt"
+                        id="end_at"
                         type="datetime-local"
-                        value={endAt}
+                        value={end_at}
                         onChange={(event) =>
                             setEndAt(event.target.value)
                         }
@@ -152,24 +157,33 @@ export default function EditEventForm({
                 </div>
             </div>
 
+
+            <div className="admin-event-form-field">
+                <label htmlFor="status">
+                    Status
+                </label>
+
+                <select
+                    id="status"
+                    value={status}
+                    onChange={(event) =>
+                        setStatus(event.target.value)
+                    }
+                >
+                    <option value="DRAFT">Draft</option>
+                    <option value="PUBLISHED">Published</option>
+                    <option value="CANCELLED">Cancelled</option>
+                    <option value="COMPLETED">Completed</option>
+                </select>
+            </div>
+
             {error && (
                 <p className="admin-event-form-error">
                     {error}
                 </p>
             )}
 
-            <div className="admin-event-form-actions">
-                <button
-                    type="button"
-                    className="admin-secondary-button"
-                    onClick={() =>
-                        router.push("/admin/events")
-                    }
-                >
-                    Cancel
-                </button>
-
-                <button
+            <button
                     type="submit"
                     className="admin-primary-button"
                     disabled={isSubmitting}
@@ -178,6 +192,19 @@ export default function EditEventForm({
                         ? "Saving..."
                         : "Save Changes"}
                 </button>
+
+            <div className="admin-event-form-actions">
+                <button
+                    type="button"
+                    className="admin-primary-button"
+                    onClick={() =>
+                        router.push("/admin/events")
+                    }
+                >
+                    Cancel
+                </button>
+
+                
             </div>
         </form>
     );
