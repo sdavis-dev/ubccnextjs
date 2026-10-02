@@ -65,7 +65,8 @@ export async function updateEvent(
     description: string,
     location: string,
     start_at: string,
-    end_at: string
+    end_at: string,
+    status: string
 ) {
     const { data, error } = await supabase
         .from("events")
@@ -75,13 +76,16 @@ export async function updateEvent(
             location,
             start_at,
             end_at,
+            status,
         })
         .eq("id", id)
         .select()
         .single();
 
     if (error) {
-        throw new Error(`Failed to update event: ${error.message}`);
+        throw new Error(
+            `Failed to update event: ${error.message}`
+        );
     }
 
     return data;
