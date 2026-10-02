@@ -1,12 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-import Script from 'next/script';
-import Navbar from "../components/Navbar";
+// app/contact/page.tsx  (no "use client" here)
+import type { Metadata } from "next";
+import BookingClient from "./BookingClient";
 
-export default function Booking() {
-  return (
-    <>
-      <Navbar />
-      </>
-  );
+export const metadata: Metadata = {
+  title: "Booking",
+  description:
+    "Book a consultation with Upward Bound.",
+};
+
+export default function BookingPage() {
+  return <BookingClient />;
 }

@@ -10,6 +10,12 @@ import MeetKimberly from "./components/home/MeetKimberly";
 import Experiences from "./components/home/Experiences";
 import FinalCTA from "./components/home/FinalCTA";
 import Footer from "./components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Upward Bound Coaching & Consulting",
+};
 
 export default function Home() {
   return (

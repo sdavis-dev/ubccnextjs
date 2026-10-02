@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bio",
+};
 
 export default function Bio() {
   return (
@@ -15,7 +20,7 @@ export default function Bio() {
 
                         <div className="bio-intro-image">
                             <Image
-                                src="/images/kah.jpg"
+                                src="/images/IMG_7726.jpeg"
                                 alt="Kimberly A. Houston"
                                 fill
                                 sizes="(max-width: 900px) 100vw, 50vw"
