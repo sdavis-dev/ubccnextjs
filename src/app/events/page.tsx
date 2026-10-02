@@ -2,6 +2,11 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { getPublishedEvents } from "@/lib/events";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Events",
+};
 
 function formatEventDate(startAt: string, endAt: string) {
     const startDate = new Date(startAt);
