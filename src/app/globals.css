@@ -122,8 +122,9 @@ header .navbar {
 
 .hero-image {
     position: relative;
+    width: 110%;
+    max-width: 750px;
     min-height: 450px;
-    min-width: 750px;
     border-radius: 14px;
     overflow: hidden;
 }
@@ -2324,6 +2325,11 @@ header .navbar {
 
     .hero-image {
         min-height: 400px;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        object-position: 75% center;  /* shifts focus to the right side */
     }
 
     .hero h1 {
