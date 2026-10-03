@@ -19,8 +19,8 @@ const experiences = [
         title: "Upcoming Events",
         description:
             "Stay connected with upcoming opportunities for growth, learning, encouragement, and community.",
-        link: "/calendar",
-        linkText: "VIEW CALENDAR →"
+        link: "/events",
+        linkText: "VIEW EVENTS →"
     }
 ];
 
