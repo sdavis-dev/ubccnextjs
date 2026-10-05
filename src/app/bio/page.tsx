@@ -176,7 +176,7 @@ export default function Bio() {
                     </p>
 
                     <blockquote>
-                      "I'm just an ordinary woman, doing extraordinary things for God and community!"
+                      "I'm just an ordinary woman, doing extraordinary things for the Glory of God and betterment of community!"
                     </blockquote>
 
                   </div>
