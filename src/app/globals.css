@@ -2219,6 +2219,15 @@ header .navbar {
     display: inline-flex;
 }
 
+.admin-login-error {
+    padding: 12px 15px;
+    color: #8a3b32;
+    background: #f7e5e2;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
 /* Responsive for max width 900px */
 @media screen and (max-width: 900px) {
     body.show-mobile-menu header::before {
