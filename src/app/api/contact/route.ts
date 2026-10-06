@@ -17,13 +17,41 @@ export async function POST(request: Request) {
 
         const { name, email, phone, message } = body;
 
-        const safeName = escapeHtml(name);
+        if (
+            typeof name !== "string" ||
+            typeof email !== "string" ||
+            typeof message !== "string"
+        ) {
+            return Response.json(
+                { error: "Invalid form submission." },
+                { status: 400 }
+            );
+        }
+
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            return Response.json(
+                { error: "Name, email, and message are required." },
+                { status: 400 }
+            );
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            return Response.json(
+                { error: "Please enter a valid email address." },
+                { status: 400 }
+            );
+        }
+
+        const cleanName = name
+            .replace(/[\r\n]/g, " ")
+            .trim();
+        const safeName = escapeHtml(cleanName);
         const safeEmail = escapeHtml(email);
         const safePhone = escapeHtml(phone || "Not provided");
         const safeMessage = escapeHtml(message);
 
         const { data, error } = await resend.emails.send({
-            from: "Upward Bound <onboarding@resend.dev>",
+            from: "Upward Bound <contact@upwardboundconsulting.net>",
             to: "iamupwardbound@yahoo.com",
             subject: `New Contact Form Message from ${safeName}`,
             html: `
@@ -81,6 +109,8 @@ export async function POST(request: Request) {
 
         return Response.json({ success: true, data });
     } catch (error) {
+        console.error("Contact form error:", error);
+        
         return Response.json(
             { error: "Something went wrong." },
             { status: 500 }
