@@ -10,19 +10,27 @@ export default function Login() {
     const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     async function handleLogin(event: React.SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
 
         console.log("handleLogin fired");
 
+        setError("")
+        setIsLoading(true);
+
         const { data, error } = await supabase.auth.signInWithPassword({
             email,
             password,
         });
 
+
         if (error) {
             console.error("Login failed:", error.message);
+            setError("Invalid email or password.");
+            setIsLoading(false);
             return;
         }
 
@@ -106,6 +114,12 @@ export default function Login() {
                                 required
                             />
                         </div>
+
+                        {error && (
+                            <p className="admin-login-error">
+                                {error}
+                            </p>
+                        )}
 
                         <button
                             type="submit"
