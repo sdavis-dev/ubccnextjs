@@ -10,6 +10,7 @@ export async function getPublishedEvents() {
         .from("events")
         .select("*")
         .eq("status", "PUBLISHED")
+        .gt("end_at", new Date().toISOString())
         .order("start_at", { ascending: true });
 
     if (error) {
