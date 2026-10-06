@@ -10,7 +10,7 @@ export async function getPublishedEvents() {
         .from("events")
         .select("*")
         .eq("status", "PUBLISHED")
-        .order("start_at", { ascending: false });
+        .order("start_at", { ascending: true });
 
     if (error) {
         throw new Error(`Failed to fetch published events: ${error.message}`);
