@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     title: "Events",
 };
 
+export const dynamic = "force-dynamic";
+
 function formatEventDate(startAt: string, endAt: string) {
     const startDate = new Date(startAt);
     const endDate = new Date(endAt);
