@@ -2836,4 +2836,30 @@ header .navbar {
     padding: 10px 25px;
 }
 
+/* Events Mobile */
+
+.events-hero {
+    padding: 75px 20px;
+}
+
+.events-hero h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+}
+
+.events-hero p:last-child {
+    font-size: 1.1rem;
+}
+
+.events-main {
+    padding: 75px 20px;
+}
+
+.events-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.events-empty {
+    padding: 45px 25px;
+}
 }
